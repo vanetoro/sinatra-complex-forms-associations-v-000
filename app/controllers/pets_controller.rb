@@ -29,8 +29,7 @@ class PetsController < ApplicationController
   post '/pets/:id' do
     @pet = Pet.find(params[:id])
     @pet.update(name: params[:pet_name])
-    binding.pry
-    @pet.update(owner: params['owner']['id'])
+    @pet.owner = Owner.find(params['owner']['name'])
   end
 
   get '/pets/:id/edit' do
