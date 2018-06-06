@@ -6,7 +6,7 @@
 <input type="text" name='pet_name' value="<%= @pet.name%>">
 <h3> Owners </h3>
 <% @owners.each do |owner|%>
-<input type="radio" name='owner[id][]' value='<%=owner.id%>' id='<%=owner.id%>'<%='checked' if @pet.owner == owner%>>
+<input type="radio" name='owner[name]' value='<%=owner.id%>' id='<%=owner.id%>'<%='checked' if @pet.owner == owner%>>
  <%=owner.name%> </input></br>
 <%end%>
 <input type="submit" value="Update Pet">
