@@ -3,7 +3,7 @@
 
 <form action="/pets/<%=@pet.id%>" method="post">
 <label> Name: </label>
-<input type="text" name='name' value="<%= @pet.name%>">
+<input type="text" name='pet_name' value="<%= @pet.name%>">
 <h3> Owners </h3>
 <% @owners.each do |owner|%>
 <input type="checkbox" name='owner[name]' value='<%=owner.id%>' id='<%=owner.id%>'<%='checked' if @pet.owner == owner%>>
