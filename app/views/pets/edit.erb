@@ -6,7 +6,7 @@
 <input type="text" name='pet_name' value="<%= @pet.name%>">
 <h3> Owners </h3>
 <% @owners.each do |owner|%>
-<input type="checkbox" name='owner_name' value="<%= @pet.name%>" <%'checked' if @pet.owner.include? (owner)%>
+<input type="checkbox" name='owner_name' <%'checked' if @pet.owner.include? (owner)%>
 <%end%>
 
 </form>
