@@ -9,5 +9,7 @@
 <input type="radio" name='owner[name]' value='<%=owner.id%>' id='<%=owner.id%>'<%='checked' if @pet.owner == owner%>>
  <%=owner.name%> </input></br>
 <%end%>
+Or enter a new owner
+<input type="text" name="owner_name">
 <input type="submit" value="Update Pet">
 </form>
